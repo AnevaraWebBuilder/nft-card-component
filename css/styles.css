@@ -1,0 +1,170 @@
+:root{
+
+	/* COLORS */
+
+	/* PRIMARY */
+	--softblue: hsl(215, 51%, 70%);
+	--cyan: hsl(178, 100%, 50%);
+
+	/* NEUTRAL */
+	--mainBG: hsl(217, 54%, 11%);
+	--cardBG: hsl(216, 50%, 16%);
+	--line: hsl(215, 32%, 27%);
+	--white: hsl(0, 0%, 100%);
+
+	/* FONT */
+	--outfit: 'Outfit', sans-serif;
+
+}
+
+*{
+	margin: 0 auto;
+}
+
+html{
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+body{
+	font-family: var(--outfit);
+	height: 100rem;
+	background-color: var(--mainBG);
+}
+
+h3{
+	font-size: 2.2rem;
+	color: var(--white);
+}
+
+p{
+	font-size: 1.8rem;
+	color: var(--softblue);
+	opacity: .8;
+}
+
+.card{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 32rem;
+	padding: 2rem;
+	background-color: var(--cardBG);
+	gap: 1rem;
+	border-radius: 1.5rem;
+	margin-top: 15rem;
+	box-shadow: 0 0 10rem -6rem;
+}
+
+.card__img:hover{
+	background-color: var(--cyan);
+	border-radius: 1.5rem;
+	cursor: pointer;
+	background-image: url("../img/icon-view.svg");
+	background-repeat: no-repeat;
+	background-size: 10rem;
+	background-position: left 11rem bottom 11rem;
+}
+
+.card__img img{
+	width: 100%;
+	height: 100%;
+	border-radius: 1rem;
+}
+
+.card__img img:hover{
+	opacity: .5;
+}
+
+.card h3{
+	margin: 1rem 0;
+	cursor: pointer;
+}
+
+.card h3:hover{
+	color: var(--cyan);
+}
+
+.amount-time{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 1rem 0;
+}
+
+.amount-time::after{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 31.5rem;
+	height: .2rem;
+	background-color: var(--line);
+	margin-top: 4rem;
+
+}
+
+.amount, .time{
+	display: flex;
+	min-width: 12rem;
+}
+
+.amount p{
+	color: var(--cyan);
+	opacity: 1;
+}
+
+.creator{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2rem 0;	
+}
+
+.creator img{
+	width: 4rem;
+}
+
+
+
+.creator p{
+	position: relative;
+	left: -2rem;
+}
+
+.creator span{
+	color: var(--white);
+	opacity: 1;
+	cursor: pointer;
+}
+
+.creator span:hover{
+	color: var(--cyan);
+}
+
+/* RESPONSIVE */
+
+
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+
+@media (max-width: 767px){
+
+.card{
+	max-width: 25rem;
+}
+
+.card__img:hover{
+	background-position: left 7.5rem bottom 7rem;
+}
+
+.amount-time::after{
+	width: 25rem;
+}
+
+.creator p{
+	font-size: 1.4rem;
+}
+
+	
+}
